@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Indian Marriage Biodata Maker — Free, Private, No Sign-up</title>
+  <meta name="description" content="Create a beautiful Indian marriage biodata instantly. No registration, no storage, client-side only. Live preview, premium-style templates, PDF download, Hindi/English friendly." />
+  <meta name="keywords" content="biodata maker, marriage biodata maker, Indian biodata format, free biodata maker, no sign up biodata, biodata PDF, shaadi biodata, Hindi biodata maker" />
+  <meta name="theme-color" content="#7c3aed" />
+  <meta property="og:title" content="Indian Marriage Biodata Maker" />
+  <meta property="og:description" content="No signup. No backend. Beautiful biodata in minutes." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script defer src="assets/app.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Indian Marriage Biodata Maker",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any",
+    "description": "Create an Indian marriage biodata instantly with live preview and PDF download. No sign-up and no server storage.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#builder">Skip to biodata builder</a>
+
+  <header class="hero">
+    <nav class="topbar">
+      <div class="brand">
+        <img src="assets/favicon.svg" alt="" class="brand-mark" />
+        <div>
+          <strong>BiodataX</strong>
+          <span>India-first marriage biodata maker</span>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <button class="ghost-btn" id="langToggle" type="button" aria-pressed="false">हिन्दी</button>
+        <a class="ghost-btn" href="#templates">Templates</a>
+        <a class="primary-btn" href="#builder">Start free</a>
+      </div>
+    </nav>
+
+    <div class="hero-grid">
+      <section class="hero-copy">
+        <div class="eyebrow">No signup • No database • No tracking</div>
+        <h1>Create a polished Indian marriage biodata in minutes.</h1>
+        <p class="lead">
+          Fill the form once, preview instantly, and download a clean PDF. Built for India with
+          the right fields, elegant templates, and a privacy-first experience.
+        </p>
+        <div class="hero-points">
+          <div>• Client-side only</div>
+          <div>• Live preview</div>
+          <div>• India-focused fields</div>
+          <div>• PDF / PNG ready</div>
+        </div>
+        <div class="hero-cta">
+          <a class="primary-btn large" href="#builder">Make biodata now</a>
+          <button class="secondary-btn large" id="scrollPreview" type="button">See preview</button>
+        </div>
+
+        <div class="trust-strip" aria-label="Key benefits">
+          <div><strong>100%</strong><span>Free</span></div>
+          <div><strong>0</strong><span>Accounts</span></div>
+          <div><strong>0</strong><span>Storage</span></div>
+          <div><strong>1 click</strong><span>Download</span></div>
+        </div>
+      </section>
+
+      <section class="hero-panel">
+        <div class="sample-card floating-card">
+          <div class="sample-head">
+            <span class="sample-dot"></span>
+            <span>Live preview</span>
+          </div>
+          <div class="sample-title">A clean, formal biodata that feels premium.</div>
+          <div class="sample-grid">
+            <div><span>Name</span><strong>Priya Sharma</strong></div>
+            <div><span>Religion</span><strong>Hindu</strong></div>
+            <div><span>Education</span><strong>MBA</strong></div>
+            <div><span>Gotra</span><strong>Kaushik</strong></div>
+          </div>
+          <div class="sample-footer">Works beautifully on mobile, desktop, and printed pages.</div>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="templates">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Templates</p>
+          <h2>Three polished styles, each with a different personality.</h2>
+        </div>
+        <p class="section-note">Switch anytime. The preview updates immediately.</p>
+      </div>
+
+      <div class="template-grid">
+        <button class="template-card active" data-template="classic" type="button">
+          <span class="template-swatch classic"></span>
+          <strong>Classic Gold</strong>
+          <small>Traditional, wedding-friendly, high contrast</small>
+        </button>
+        <button class="template-card" data-template="modern" type="button">
+          <span class="template-swatch modern"></span>
+          <strong>Modern Navy</strong>
+          <small>Clean, sharp, professional, minimal</small>
+        </button>
+        <button class="template-card" data-template="soft" type="button">
+          <span class="template-swatch soft"></span>
+          <strong>Soft Floral</strong>
+          <small>Elegant, calm, ornate without clutter</small>
+        </button>
+      </div>
+    </section>
+
+    <section class="section" id="builder">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Builder</p>
+          <h2>Enter details once. Get a biodata instantly.</h2>
+        </div>
+        <div class="badge">No login • No server • No data leaves your device</div>
+      </div>
+
+      <div class="builder-layout">
+        <form class="builder-form" id="biodataForm" novalidate>
+          <div class="form-card">
+            <h3>Profile</h3>
+            <div class="grid two">
+              <label>Full name<input name="fullName" placeholder="Priya Sharma" /></label>
+              <label>Gender
+                <select name="gender">
+                  <option>Female</option><option>Male</option><option>Other</option>
+                </select>
+              </label>
+              <label>Date of birth<input name="dob" placeholder="DD-MM-YYYY" /></label>
+              <label>Birth time<input name="birthTime" placeholder="08:45 AM" /></label>
+              <label>Height<input name="height" placeholder="5'4&quot; / 162 cm" /></label>
+              <label>Complexion<input name="complexion" placeholder="Fair / Wheatish / Dusky" /></label>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <h3>Family & Religion</h3>
+            <div class="grid two">
+              <label>Religion
+                <select name="religion">
+                  <option>Hindu</option><option>Muslim</option><option>Christian</option><option>Other</option>
+                </select>
+              </label>
+              <label>Community / Caste<input name="community" placeholder="Maratha / Brahmin / Jain..." /></label>
+              <label>Gotra<input name="gotra" placeholder="Optional" /></label>
+              <label>Rashi<input name="rashi" placeholder="Mesh / Vrishabh..." /></label>
+              <label>Nakshatra<input name="nakshatra" placeholder="Ashwini / Rohini..." /></label>
+              <label>Manglik status
+                <select name="manglik">
+                  <option>Not Applicable</option><option>Yes</option><option>No</option><option>Partial / Manglik Dosh</option>
+                </select>
+              </label>
+            </div>
+            <div class="grid two">
+              <label>Father's name<input name="fatherName" placeholder="Rajesh Sharma" /></label>
+              <label>Father's occupation<input name="fatherOccupation" placeholder="Business" /></label>
+              <label>Mother's name<input name="motherName" placeholder="Sangeeta Sharma" /></label>
+              <label>Mother's occupation<input name="motherOccupation" placeholder="Homemaker / Teacher" /></label>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <h3>Education & Work</h3>
+            <div class="grid two">
+              <label>Education<input name="education" placeholder="MBA, B.Tech, M.Com..." /></label>
+              <label>Occupation<input name="occupation" placeholder="Software Engineer" /></label>
+              <label>Company / Business<input name="company" placeholder="TCS / Self-employed" /></label>
+              <label>Annual income<input name="income" placeholder="₹8 LPA" /></label>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <h3>Contact & Preferences</h3>
+            <div class="grid two">
+              <label>City<input name="city" placeholder="Pune" /></label>
+              <label>Mother tongue<input name="motherTongue" placeholder="Marathi" /></label>
+              <label>Mobile number<input name="mobile" placeholder="+91 98xxxxxx" /></label>
+              <label>Email<input name="email" placeholder="name@example.com" /></label>
+              <label class="full">About me<textarea name="about" rows="4" placeholder="Simple, family-oriented, loves reading and travel."></textarea></label>
+              <label class="full">Partner preference<textarea name="partnerPref" rows="4" placeholder="Looking for a caring, well-educated partner from a respectful family."></textarea></label>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <h3>Photo</h3>
+            <div class="photo-row">
+              <label class="photo-upload">
+                <input id="photoInput" name="photo" type="file" accept="image/*" />
+                <span>Choose photo</span>
+                <small>Optional, stays local in your browser</small>
+              </label>
+              <div class="photo-preview">
+                <img id="photoPreview" alt="Preview" />
+              </div>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="primary-btn large" type="button" id="downloadPdf">Download PDF</button>
+            <button class="secondary-btn large" type="button" id="downloadPng">Download PNG</button>
+            <button class="ghost-btn large" type="reset">Clear form</button>
+          </div>
+        </form>
+
+        <aside class="preview-shell">
+          <div class="preview-toolbar">
+            <div>
+              <strong>Preview</strong>
+              <span id="templateName">Classic Gold</span>
+            </div>
+            <div class="preview-pill">A4 ready</div>
+          </div>
+
+          <div class="preview-paper template-classic" id="previewCard">
+            <div class="preview-header">
+              <div>
+                <div class="preview-symbol">ॐ</div>
+                <div class="preview-name" id="pName">Priya Sharma</div>
+                <div class="preview-sub" id="pSubtitle">Hindu • Female • Pune</div>
+              </div>
+              <div class="preview-photo-wrap"><img id="previewPhoto" alt="" /></div>
+            </div>
+
+            <div class="preview-sections">
+              <section>
+                <h4>Personal Details</h4>
+                <div class="data-grid" id="pPersonal"></div>
+              </section>
+              <section>
+                <h4>Family Details</h4>
+                <div class="data-grid" id="pFamily"></div>
+              </section>
+              <section>
+                <h4>Education & Career</h4>
+                <div class="data-grid" id="pCareer"></div>
+              </section>
+              <section>
+                <h4>About / Preferences</h4>
+                <div class="preview-text" id="pAbout"></div>
+                <div class="preview-text subtle" id="pPref"></div>
+              </section>
+            </div>
+          </div>
+
+          <p class="preview-note">This preview is the exact layout used for download.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section grid-section">
+      <div class="info-card">
+        <p class="section-kicker">Why this wins</p>
+        <h2>Built around the exact things Indian users search for.</h2>
+        <p>Free. No registration. Strong cultural fields. Fast preview. Elegant templates. Downloads instantly.</p>
+      </div>
+      <div class="info-card">
+        <p class="section-kicker">Privacy</p>
+        <h2>No database. No storage. No backend.</h2>
+        <p>Your biodata is assembled entirely in the browser. Refresh the page and nothing is saved unless the user downloads it.</p>
+      </div>
+      <div class="info-card">
+        <p class="section-kicker">SEO-ready</p>
+        <h2>Structured, crawlable, and keyword-focused.</h2>
+        <p>Landing copy, FAQs, metadata, and fast performance are baked in for GitHub Pages deployment.</p>
+      </div>
+    </section>
+
+    <section class="section faq">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">FAQ</p>
+          <h2>Answers users care about before they start.</h2>
+        </div>
+      </div>
+
+      <details open><summary>Is my biodata stored anywhere?</summary><p>No. Everything runs locally in the browser and nothing is sent to a server.</p></details>
+      <details><summary>Can I use this on GitHub Pages?</summary><p>Yes. It is a static site with HTML, CSS, and JavaScript only.</p></details>
+      <details><summary>Does it support Indian matrimonial fields?</summary><p>Yes. It includes gotra, rashi, nakshatra, manglik status, family details, and more.</p></details>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <strong>BiodataX</strong>
+      <p>Free Indian marriage biodata maker for everyone.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#builder">Builder</a>
+      <a href="#templates">Templates</a>
+      <a href="#">Privacy</a>
+    </div>
+  </footer>
+</body>
+</html>
